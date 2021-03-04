@@ -14,4 +14,4 @@ django-bootstrap4 = "*"
 django-bootstrap-datepicker-plus = "*"
 
 [requires]
-python_version = "3.7"
+python_version = "3.8.6"
