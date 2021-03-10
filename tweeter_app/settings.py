@@ -43,12 +43,21 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'django.contrib.sites', # new
 
-     'bootstrap4', # new
-     'bootstrap_datepicker_plus', # new
+    'rest_framework',
+    'rest_framework.authtoken',
+    'allauth', # new
+    'allauth.account', # new
+    'allauth.socialaccount', # new
+    'rest_auth',
+    'rest_auth.registration', # new
+    'bootstrap4',
+    'bootstrap_datepicker_plus',
 
-     'users', # new
-     'tweets', # new
+    'users',
+    'tweets',
+    'api',
 ]
 
 AUTH_USER_MODEL = 'users.CustomUser' # new
@@ -93,6 +102,20 @@ EMAIL_HOST_USER =  'jacksontruong0305@gmail.com' # new
 EMAIL_HOST_PASSWORD = 'ekuvqvoszugtnuep' # new # new
 EMAIL_PORT = 587 # new
 EMAIL_USE_TLS = True # new
+
+SITE_ID = 1 # new
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        # 'rest_framework.permissions.AllowAny',
+        'rest_framework.permissions.IsAuthenticatedOrReadOnly',
+    ],
+    'DEFAULT_AUTHENTICATION_CLASSES': [ # new
+        'rest_framework.authentication.TokenAuthentication', # new
+        'rest_framework.authentication.SessionAuthentication', # new
+],
+}
 
 
 # Database
