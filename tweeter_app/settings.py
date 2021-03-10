@@ -13,12 +13,7 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 from pathlib import Path
 import os
 import django_heroku # <- this line goes near the top of the file
-import environ # new
 
-env = environ.Env() # new
-
-# reading .env file
-environ.Env.read_env() # new
 
 
 
@@ -94,8 +89,8 @@ LOGOUT_REDIRECT_URL = 'home' # new
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend' # new
 EMAIL_HOST = 'smtp.gmail.com' # new
-EMAIL_HOST_USER =  env.str('GMAIL_USERNAME') # new
-EMAIL_HOST_PASSWORD = env.str('GMAIL_PASSWORD') # new
+EMAIL_HOST_USER =  'jacksontruong0305@gmail.com' # new
+EMAIL_HOST_PASSWORD = 'ekuvqvoszugtnuep' # new # new
 EMAIL_PORT = 587 # new
 EMAIL_USE_TLS = True # new
 
